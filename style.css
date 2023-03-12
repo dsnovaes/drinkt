@@ -1,0 +1,545 @@
+/* this should be at the top of your theme CSS file
+
+ Theme Name:   Água Lôa
+ Author:       Diego Novaes
+ Author URI:   https://diegonovaes.com
+*/
+:root {
+    /* LOA */
+    --color-primary: #0163D7;
+    --color-secondary:#01A4D7;
+    /* DRINKT */
+    /* --color-primary: #37793e;
+    --color-secondary:#ff8c29; */
+    --color-ism:#008C38;
+    --color-grey:#666;
+    --color-greyer:#333;
+    --color-transparent-black:rgba(0,0,0,0.15);
+    --color-transparent-black-light:rgba(0,0,0,0.05);
+    --color-transparent-white:rgba(255,255,255,0.5);
+    --color-gradient-black:linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+}
+::selection {
+    background: var(--color-primary);
+    color: #fff;
+    text-shadow: none;
+}
+@font-face {
+    font-family: PT Sans;
+    src: url(PT_Sans/PTSans-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: PT Sans;
+    src: url(PT_Sans/PTSans-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: PT Sans;
+    src: url(PT_Sans/PTSans-Italic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}	
+@font-face {
+    font-family: PT Sans;
+    src: url(PT_Sans/PTSans-BoldItalic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}	
+
+body {
+    font-family: PT Sans, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+a {
+	transition: .25s all;
+}
+a:hover {
+	transition: .25s all;
+}
+article {
+    color: var(--color-grey);
+}
+article strong {
+    color: var(--color-greyer);
+}
+body.home article {
+    text-align: center;
+}
+#selo-ism {
+    position: absolute;
+    display: none;
+    z-index:90;
+    width: 200px;
+    top: -15px;
+    left: 200px;
+	transition: .25s all;
+}
+#selo-ism img {
+    width: 200px;
+    height: auto;
+}
+#selo-ism:hover {
+    top: 0;
+	transition: .25s all;
+}
+#selo-ism:hover a {
+    opacity: 1;
+}
+.text-primary {
+    color: var(--color-primary) !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 90%;
+    text-decoration: none;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid var(--color-primary) !important;
+    border-radius: 4px;
+    padding: 15px 45px;
+}
+.btn-primary:hover {
+    background-color: var(--color-primary);
+    color: #fff !important;
+    /* box-shadow: 0 0 30px var(--color-secondary); */
+}
+.btn-white {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px 45px;
+}
+.btn-white:hover {
+    background-color: var(--color-primary);
+    color: #fff !important;
+    /* box-shadow: 0 0 30px var(--color-secondary); */
+}
+header {
+    height: 130px;
+}
+header .container {
+    position: relative;
+}
+
+header nav a {
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+header nav a {
+    padding: 1rem 3rem;
+}
+header nav a:hover {
+    opacity: 0.5;
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+}
+header nav ul li a:hover {
+    color: var(--color-primary) !important;
+}
+body.home header nav .navbar-brand {
+    transition: none;
+}
+header nav ul li:last-child a {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+}
+header nav ul li:last-child a:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+    opacity: 1;
+    box-shadow: 0 0 30px var(--color-transparent-black);
+}
+header nav ul li ul {
+    display: none;
+}
+header .menu-item {
+    margin-left: 30px;;
+}
+
+.swiper-bannerHome img {
+    width: 100%;
+    height: auto;
+}
+.swiper-notification {
+    display: none;
+}
+.produtos .packshot {
+    position: relative;
+    height: 300px;
+    width: 200px;
+}
+.produtos .packshot .borda {
+    position: absolute;
+    border:1px solid var(--color-transparent-black);
+    height: 240px;
+    width: 200px;
+    border-radius: 80px;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+	transition: .25s all;
+}
+.produtos .swiper-slide:hover .borda {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+	transition: .25s all;
+}
+.produtos .packshot img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    transform: scale(0.9);
+}
+.produtos .swiper-slide:hover img {
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+.swiper2 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+.produtos .swiper-slide h2 a {
+    text-decoration: none;
+    font-weight: bold;
+	color: var(--color-primary) !important;
+}
+.produtos .swiper-slide h2 a:hover {
+    opacity: 0.5;
+}
+.produtos .swiper-slide p {
+    color: var(--color-grey);
+    font-size: 85%;
+    margin-bottom: 1.5rem;
+}
+
+.banner .swiper-button-next, .swiper-button-prev {
+    background: #fff;
+    padding: 30px;
+}
+.banner .swiper-button-next:hover, 
+.banner .swiper-button-prev:hover {
+    background-color: var(--color-primary);
+    color: #fff !important;
+}
+.swiper-button-next, .swiper-button-prev {
+	color: var(--color-secondary) !important;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+	color: var(--color-primary) !important;
+}
+.swiper-button-disabled {
+    color: var(--color-grey) !important;
+}
+
+.news .single {
+    border-radius: 4px;
+    border: 1px solid var(--color-transparent-black);
+	transition: .25s all;
+}
+.news .single:hover {
+    /* box-shadow: 0 0 30px var(--color-secondary); */
+    border-color: var(--color-primary);
+	transition: .25s all;
+    background-color: var(--color-primary);
+}
+.news .single:hover p {
+    color: #fff;
+}
+.news .single p {
+    color: var(--color-grey);
+    font-size: 80%;
+    margin: 0;
+}
+.news .single .thumb {
+    position: relative;
+    height: 210px;
+    display: block;
+    background-size: cover !important;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.news .single h3 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: -8px;
+    left: 0;
+	transition: .25s all;
+}
+.news .single h3 a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 80%;
+    text-decoration: none;
+}
+
+.news .single:hover h3 {
+    padding-bottom:1.75rem !important;
+	transition: .25s all;
+}
+
+.ig-feed .col {
+    background-color: #eaeaea;
+    height: 20vw;
+}
+.ig-feed .col:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+.where_to_buy .container {
+    background: url('img/gota-ism.svg') no-repeat 70% 0, 
+                linear-gradient(272.08deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    color: #fff;
+}
+.where_to_buy h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 90%;
+    color: #fff;
+}
+.where_to_buy h3 {
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 200%;
+    color: #fff;
+}
+body.page-id-22 h2 {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+body.page-id-22 .row .text-center img {
+    max-width: 100%;
+    height: auto;
+}
+body.single-produtos, body.post-type-archive-produtos {
+    background-color: var(--color-primary);
+}
+body.single-produtos h1, body.post-type-archive-produtos h1 {
+    color: #fff !important;
+}
+body.single-produtos header nav ul li a, body.post-type-archive-produtos header nav ul li a {
+    color: #fff;
+}
+body.single-produtos header nav ul li:last-child a, body.post-type-archive-produtos header nav ul li:last-child a {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+body.single-produtos header nav a:hover, body.post-type-archive-produtos header nav a:hover {
+    color: var(--color-secondary) !important;
+}
+body.single-produtos header nav ul li:last-child a:hover, body.single-produtos .btn-white:hover, body.post-type-archive-produtos header nav ul li:last-child a:hover, body.post-type-archive-produtos .btn-white:hover {
+    background-color: var(--color-secondary);
+    color: #fff !important;
+    opacity: 1;
+}
+body.single-produtos figure {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    padding: 30px;
+    width: 600px;
+}
+body.single-produtos article {
+    text-align: center;
+    color: #fff;
+}
+body.single-post article h1 {
+    font-size: 320%;
+    color: var(--color-greyer) !important;
+}
+body.single-post article .featured img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+body.single-post article a {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+body.single-post article a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+body.single-post article h2 {
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+body.single-post article h3 {
+    color: var(--color-greyer);
+    margin-top: 1.5rem;
+}
+body.single-post article .text-start {
+    color: var(--color-greyer);
+    font-size: 80%;
+}
+body.single-post article .text-start span {
+    color: var(--color-grey) !important;
+}
+body.single-post article .share a {
+    color: var(--color-transparent-black);
+    font-size: 120%;
+    margin-left: 10px;
+}
+body.single-post article .share a:hover .fa-facebook {
+    color: #3b5998;
+}
+body.single-post article .share a:hover .fa-whatsapp {
+    color: #25D366;
+}
+body.single-post article .share a:hover .fa-twitter {
+    color: #1DA1F2;
+}
+body.single-post article .share a:hover .fa-telegram {
+    color: #0088CC;
+}
+body.single-post article .share a:hover .fa-envelope, 
+body.single-post article .share a:hover .fa-link {
+    color: var(--color-grey);
+    cursor: pointer;
+}
+body.single-post .post-categories {
+    list-style: none;
+}
+body.single-post .cat-title a {
+    color: var(--color-primary) !important;
+}
+figcaption {
+	font-size: 80%;
+	margin: 10px 0 30px 0;
+	text-align: center;
+	font-style: italic;
+}
+.featured {
+	position: relative;
+}
+.featured figcaption.credits {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 5px 10px;
+    margin: 0;
+	text-align: right;
+	border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+	color: #fff;
+	background-color: var(--color-transparent-black);
+	font-style: normal;
+    font-size: 70%;
+}
+.title {
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 200%;
+    color: var(--color-primary) !important;
+}
+footer {
+    background-color: var(--color-ism);
+    color: #ffffff;
+    font-size: 80%;
+}
+footer p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+footer a {
+    color: var(--color-transparent-white);
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fff;
+}
+footer .last {
+    border-top: 1px solid var(--color-transparent-black);
+    font-weight: normal;
+}
+footer .last a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer .last a:hover {
+    text-decoration: none;
+}
+footer li {
+    margin-bottom: 5px;
+}
+
+footer .sac a {
+    font-size: 200%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .where_to_buy .col-10 {
+        margin-bottom: 30px;
+    }
+    .where_to_buy .btn-white {
+        margin-top:30px;
+    }
+    #selo-ism {
+        display: none;
+    }
+    body.single-post article .text-start span {
+        display: none;
+    }
+    body.single-post article h1 {
+        font-size: 200%;
+    }
+    body.single-produtos figure {
+        width: 100%;
+    }
+    .produtos .swiper-slide:hover img {
+        animation: none;
+    }
+    footer .col-sm-12 {
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+    }
+
+}
+@media (max-width: 1200px) {
+    .produtos .packshot .borda {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    .produtos .swiper-slide img {
+        position: inherit;
+    }
+}
