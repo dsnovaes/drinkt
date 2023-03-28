@@ -7,8 +7,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Água Lôa
- * @since Água Lôa
+ * @subpackage Drinkt
+ * @since Drinkt
  */
 ?>
 <?php
@@ -69,7 +69,7 @@ get_header();
             <h3 class="text-primary">Produtos</h3>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <p><?php echo get_excerpt(140, 'the_content'); ?></p>
-            <p><a href="<?php echo get_permalink(22); ?>" class="btn-primary text-primary">Onde comprar</a></p>
+            <p><a href="<?php echo get_permalink(24); ?>" class="btn-primary text-primary">Onde comprar</a></p>
           </div>
         </div>
       </div>

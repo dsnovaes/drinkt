@@ -1,10 +1,10 @@
 
 <?php
 
-    define("MARCA", "Água Mineral Lôa");
-    define("MARCA_ABREVIADA", "Lôa");
-    define("USER_IG", "agualoa");
-    define("DOMINIO", "agualoa.com.br");
+    define("MARCA", "Chá Preto Drink t");
+    define("MARCA_ABREVIADA", "Drink t");
+    define("USER_IG", "drinkt");
+    define("DOMINIO", "drinkt.com.br");
 
 
     add_theme_support( 'menus' );

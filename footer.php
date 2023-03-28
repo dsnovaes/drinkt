@@ -52,7 +52,7 @@
       <div class="col-md-2 col-3">ISM &copy; <span id="year"></span></div>
       <script type="text/javascript">document.getElementById("year").innerHTML = new Date().getFullYear();</script>
       <div class="col-md-2 col-5 text-left d-none"><small><a href="https://grupoism.com.br/politicas-de-privacidade" rel="nofollow noopener">Políticas de Privacidade</a></small></div>
-      <div class="col-md-8 col-4 text-end"><small><a href="https://diegonovaes.com.br" rel="nofollow noopener">Desenvolvedor Frontend</a></small></div>
+      <div class="col-md-8 col-4 text-end"><small>Desenvolvido por <a href="https://diegonovaes.com.br" rel="nofollow noopener">Diego Novaes</a></small></div>
     </div>
   </div>
 </footer>

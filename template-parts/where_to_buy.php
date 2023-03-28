@@ -6,7 +6,7 @@
         <h3>Encontre <?php echo MARCA_ABREVIADA ?> em uma rede pertinho de você.</h3>
       </div>
       <div class="col-md-6 col-12 align-self-center text-center">
-        <a href="<?php echo get_permalink(22); ?>" class="btn-white text-primary">Onde comprar <?php echo MARCA_ABREVIADA ?></a>
+        <a href="<?php echo get_permalink(24); ?>" class="btn-white text-primary">Onde comprar <?php echo MARCA_ABREVIADA ?></a>
       </div>
     </div>
   </div>

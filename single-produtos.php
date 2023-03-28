@@ -10,7 +10,7 @@ get_header();
 
   <h1 class="title"><?php echo the_title(); ?></h1>
   <?php the_content(); ?>
-  <p class="mt-5"><a href="<?php echo get_permalink(22); ?>" class="btn-white text-primary">Onde comprar</a></p>
+  <p class="mt-5"><a href="<?php echo get_permalink(24); ?>" class="btn-white text-primary">Onde comprar</a></p>
 </article>
 
 

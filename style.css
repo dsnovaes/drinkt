@@ -6,11 +6,11 @@
 */
 :root {
     /* LOA */
-    --color-primary: #0163D7;
-    --color-secondary:#01A4D7;
+    /* --color-primary: #0163D7;
+    --color-secondary:#01A4D7; */
     /* DRINKT */
-    /* --color-primary: #37793e;
-    --color-secondary:#ff8c29; */
+    --color-primary: #37793e;
+    --color-secondary:#ff8c29;
     --color-ism:#008C38;
     --color-grey:#666;
     --color-greyer:#333;
@@ -119,7 +119,7 @@ body.home article {
     /* box-shadow: 0 0 30px var(--color-secondary); */
 }
 header {
-    height: 130px;
+    background-color: var(--color-primary);
 }
 header .container {
     position: relative;
@@ -130,13 +130,10 @@ header nav a {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-primary);
+    color: white;
 }
 header nav a {
     padding: 1rem 3rem;
-}
-header nav a:hover {
-    opacity: 0.5;
 }
 header nav ul {
     list-style: none;
@@ -145,20 +142,23 @@ header nav ul li {
     display: inline-block;
 }
 header nav ul li a:hover {
-    color: var(--color-primary) !important;
+    background-color: white;
+    color: var(--color-primary);
+    padding: 1rem 3rem;
+    border-radius: 4px;
 }
 body.home header nav .navbar-brand {
     transition: none;
 }
 header nav ul li:last-child a {
-    background-color: var(--color-primary);
-    color: #fff;
+    background-color: white;
+    color: var(--color-primary);
     padding: 1rem 3rem;
     border-radius: 4px;
 }
 header nav ul li:last-child a:hover {
-    background-color: #fff;
-    color: var(--color-primary);
+    color: #fff !important;
+    background-color: var(--color-secondary);
     opacity: 1;
     box-shadow: 0 0 30px var(--color-transparent-black);
 }
@@ -336,11 +336,11 @@ header .menu-item {
     font-size: 200%;
     color: #fff;
 }
-body.page-id-22 h2 {
+body.page-id-24 h2 {
     color: var(--color-secondary);
     font-weight: bold;
 }
-body.page-id-22 .row .text-center img {
+body.page-id-24 .row .text-center img {
     max-width: 100%;
     height: auto;
 }
