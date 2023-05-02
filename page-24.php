@@ -1,6 +1,7 @@
 <?php
 get_header();
 ?>
+<!-- onde comprar -->
 
 <article class="container py-5">   
     <h1 class="title"><?php echo the_title(); ?></h1>
