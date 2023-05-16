@@ -20,7 +20,7 @@
     $campanha = get_field('campanha'); 
     $title = get_the_title();
 ?>
-<body bgcolor="#fff" style="margin:0;padding:0;">
+<body bgcolor="#ffffff" style="margin:0;padding:0;">
 <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" bgcolor="#fff" style="border-spacing:0;border-collapse: unset;">
 
 <?php 
@@ -29,7 +29,7 @@
         $link = get_sub_field('link');
 ?>
   <tr style="text-align:center">
-    <td style="text-align:center" bgcolor="#fff">
+    <td style="text-align:center" bgcolor="#ffffff">
         <?php
             if($link) { 
                 echo '<a href="'. $link .'?utm_medium=lp&utm_campaign=' . $campanha . '&utm_source='. $title .'&utm_content='. $img .'" target="_blank" style="border:none;text-align:center;"><img src="'. $img .'" style="display:block;margin:0;padding:0;width:100%;height:auto;"></a>';
