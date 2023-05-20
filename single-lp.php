@@ -21,7 +21,7 @@
     $title = get_the_title();
 ?>
 <body bgcolor="#ffffff" style="margin:0;padding:0;">
-<table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" bgcolor="#fff" style="border-spacing:0;border-collapse: unset;">
+<table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" bgcolor="#ffffff" style="border-spacing:0;border-collapse: unset;">
 
 <?php 
         while( have_rows('fatias') ) : the_row();   
